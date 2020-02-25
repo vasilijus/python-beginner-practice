@@ -51,3 +51,5 @@ pipenv install requests
 ```
 from meteors import find_meteors 
 ```
+
+## If the code is meant to be run as a script , put it in - if __name__ == '__main__': block
