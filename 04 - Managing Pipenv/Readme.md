@@ -19,9 +19,9 @@ python3 find_meteors.py
 
 First install pipenv . Then:
 
-`
+```
 pip3 install pipenv
-pipenv run "python find_meteors.py"
-`
+pipenv run "python meteor/find_meteors.py"
+```
 
 Add Pipfile to  -> .gitinore
