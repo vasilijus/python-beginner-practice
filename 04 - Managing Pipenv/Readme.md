@@ -25,3 +25,10 @@ pipenv run "python meteor/find_meteors.py"
 ```
 
 Add Pipfile to  -> .gitinore
+
+## Development purposes 
+
+will install ipython for the development, not when we are actually running it ( -d )
+```
+pipenv install -d ipython
+```

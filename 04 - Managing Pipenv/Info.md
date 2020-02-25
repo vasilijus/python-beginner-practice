@@ -47,3 +47,7 @@ pipenv install requests
 `
  - This will add the ( requests ) to the Pipfile package list ! ( * - latest version )
 
+ looks into folder 'meteors' and fires the find_meteors.py file
+```
+from meteors import find_meteors 
+```

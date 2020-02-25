@@ -19,23 +19,24 @@ def calc_distance(lat1, lon1, lat2, lon2):
 def get_distance(meteor):
     return meteor.get('distance', math.inf)
 
-my_location = ( 53.1682, 50.4494 ) # My location based in google maps
-meteorite_api = 'https://data.nasa.gov/resource/gh4g-9sfh.json'
+if __name__ == '__main__':
+	my_location = ( 53.1682, 50.4494 ) # My location based in google maps
+	meteorite_api = 'https://data.nasa.gov/resource/gh4g-9sfh.json'
 
-print("Catching API")
-meteor_response = requests.get(meteorite_api)
-meteor_data     = meteor_response.json()
-print("Status code: " + str(meteor_response.status_code) )
+	print("Catching API")
+	meteor_response = requests.get(meteorite_api)
+	meteor_data     = meteor_response.json()
+	print("Status code: " + str(meteor_response.status_code) )
 
-for meteor in meteor_data:
-    if not ('reclat' in meteor and 'reclong' in meteor): continue
-    meteor['distance'] = calc_distance( float(meteor['reclat']),
-                                        float(meteor['reclong']),
-                                        my_location[0],
-                                        my_location[1] )
+	for meteor in meteor_data:
+		if not ('reclat' in meteor and 'reclong' in meteor): continue
+		meteor['distance'] = calc_distance( float(meteor['reclat']),
+											float(meteor['reclong']),
+											my_location[0],
+											my_location[1] )
 
-meteor_data.sort( key = get_distance )
+	meteor_data.sort( key = get_distance )
 
-print("1 Per Line: ...")
-for close_ten in meteor_data[0:10]:
-    print( close_ten ) 
+	print("1 Per Line: ...")
+	for close_ten in meteor_data[0:10]:
+		print( close_ten ) 
