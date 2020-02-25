@@ -42,37 +42,45 @@ re.findall(vowels_re, "dangerous")
 clear
 # more of the standard library
 import turtle
+
 turtle.fd(100)
 turtle.lt(90)
 turtle.fd(100)
 turtle.lt(90)
 turtle.fd(40).rt(90).fd(50).lt(90).fd(50)
+
 turtle.clear()
+
 def do_square(size):
     for i in range(4):
         turtle.fd(size)
         turtle.lt(90)
 do_square(100)
 do_square(200)
-turlte.clear()
+
 turtle.clear()
 # make turtle do a triangle
 def do_triangle(size):
     for i in range(3):
         turtle.fd(size)
         turtle.lt(120)
-do_triagnle(100)
+
 do_triangle(100)
 turtle.color('red')
+
 do_triangle(200)
+
 # make polygon
 def do_pol(size, sides):
     angle = 360 / sides
     for i in range(sides):
         turtle.fd(size)
         turtle.lt(angle)
+
 turtle.clear()
+
 do_pol(50, 10)
 do_pol(50, 7)
 do_pol(50, 4)
+
 %hist -o -f iphyton_history_module_2.md
