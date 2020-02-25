@@ -19,8 +19,7 @@ def calc_distance(lat1, lon1, lat2, lon2):
 def get_distance(meteor):
     return meteor.get('distance', math.inf)
 
-# my_location = ( 53.1682, 50.4494 ) # My location based in google maps
-my_location = ( 29.424122, -98.493628 ) 
+my_location = ( 53.1682, 50.4494 ) # My location based in google maps
 meteorite_api = 'https://data.nasa.gov/resource/gh4g-9sfh.json'
 
 print("Catching API")
